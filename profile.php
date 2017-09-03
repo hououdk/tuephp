@@ -69,7 +69,7 @@
         <h2>Users pokémon</h2>
         
         
-        /* En liste af de pokémons vi har fanget. Vi vil gerne have vist poke_id, poke_name og type_name for den enkelte pokemon. Dem vil vi gerne have vist, for den bruger der er online. Brugernavnet er gemt i session $_SESSION['user']. Herudover definerer vi til sidst hvad vores foreignkeys er lig med. */
+        <!-- En liste af de pokémons vi har fanget. Vi vil gerne have vist poke_id, poke_name og type_name for den enkelte pokemon. Dem vil vi gerne have vist, for den bruger der er online. Brugernavnet er gemt i session $_SESSION['user']. Herudover definerer vi til sidst hvad vores foreignkeys er lig med. */-->
         <?php  
             $sql="SELECT t2.poke_id, t2.poke_name, t3.type_name FROM `trainer_has_pokemon` t1, `pokemon` t2, `type` t3, `trainer` t4 where t4.trainer_username='".$_SESSION['user']."' and t1.trainer_id= t4.trainer_id and t1.poke_id = t2.poke_id and t3.type_id = t2.type_id";
             $stmt = $link->prepare($sql);
